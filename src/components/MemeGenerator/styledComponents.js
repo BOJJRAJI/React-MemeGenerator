@@ -8,14 +8,24 @@ export const BgContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   padding: 20px;
+  @media screen and (max-width: 576px) {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
 `
 
 export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   align-items: left;
-  width: 30%;
+  width: 50%;
   margin-right: 30px;
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    margin-left: 20px;
+    order: 2;
+  }
 `
 
 export const Heading = styled.h1`
@@ -23,6 +33,9 @@ export const Heading = styled.h1`
   font-family: 'Roboto';
   font-weight: bold;
   color: #35469c;
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 `
 
 export const LabelInputCon = styled.div`
@@ -68,8 +81,8 @@ export const Button = styled.button`
   border-radius: 5px;
 `
 export const MemeContainer = styled.div`
-  width: 30%;
-  margin-left: 10px;
+  width: 50%;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -77,6 +90,11 @@ export const MemeContainer = styled.div`
   background-image: url(${props => props.url});
   height: 300px;
   background-size: cover;
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    margin-left: 20px;
+    order: 1;
+  }
 `
 
 export const Text = styled.p`
@@ -91,4 +109,7 @@ export const SmallDvHeading = styled.h1`
   font-weight: bold;
   color: #35469c;
   display: none;
+  @media screen and (max-width: 576px) {
+    display: flex;
+  }
 `
