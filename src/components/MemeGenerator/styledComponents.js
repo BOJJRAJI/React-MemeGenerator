@@ -1,76 +1,94 @@
 import styled from 'styled-components'
 
-export const AppContainer = styled.div`
+export const BgContainer = styled.div`
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
-  padding: 50px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
 `
+
 export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  align-items: left;
+  width: 30%;
+  margin-right: 30px;
 `
 
 export const Heading = styled.h1`
+  font-size: 27px;
   font-family: 'Roboto';
-  font-size: 30px
-  color: #35469c
-  font-weight: bold
+  font-weight: bold;
+  color: #35469c;
 `
 
-export const Paragraph = styled.p`
-  color: #ffffff;
-  font-size: ${props => props.activeFontSizeId}px;
-  font-weight: 600;
-  font-family: 'Open Sans';
-`
-export const Label = styled.label`
-  font-family: 'Roboto';
-  font-size: 15px;
-  color: #5a7184;
-  font-weight: 500;
+export const LabelInputCon = styled.div`
   margin-top: 10px;
+  width: 100%;
 `
 
-export const InputEle = styled.input`
-  border: 2px solid #d7dfe9;
-  color: #5a7184;
+export const Label = styled.label`
+  font-size: 14px;
   font-family: 'Roboto';
-  padding: 7px;
+  color: #7e858e;
+`
+
+export const Input = styled.input`
+  border: 1px solid #d7dfe9;
+  padding: 10px;
+  border-radius: 3px;
   margin-top: 5px;
-  border-radius: 5px;
+  width: 100%;
 `
-export const CustomSelect = styled.select`
-  border: 2px solid #d7dfe9;
-  color: #5a7184;
-  font-family: 'Roboto';
-  padding: 7px;
+
+export const Select = styled.select`
+  border: 1px solid #d7dfe9;
+  padding: 10px;
+  width: 33%;
+  border-radius: 3px;
   margin-top: 5px;
-  border-radius: 5px;
+  width: 100%;
 `
-export const CustomOption = styled.option`
-  color: #5a7184;
-  font-family: 'Roboto';
-  font-size: 15px;
+
+export const Option = styled.option`
+  font-size: 13px;
 `
+
 export const Button = styled.button`
+  border: none;
   background-color: #0b69ff;
   color: #ffffff;
-  padding: 10px;
   margin-top: 10px;
-  border: none;
-  width: 100px;
-  border-radius: 7px;
+  margin-bottom: 10px;
+  width: 40%;
+  padding: 10px;
+  border-radius: 5px;
 `
-
 export const MemeContainer = styled.div`
-  background-image: url(${props => props.bgImage});
+  width: 30%;
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
+  align-items: center;
+  background-image: url(${props => props.url});
+  height: 300px;
   background-size: cover;
-  padding: 20px;
-  margin-left: 20px;
+`
+
+export const Text = styled.p`
+  font-size: ${props => props.size}px;
+  font-family: 900;
+  font-weight: bold;
+  color: #ffffff;
+`
+export const SmallDvHeading = styled.h1`
+  font-size: 27px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  color: #35469c;
+  display: none;
 `
